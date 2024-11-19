@@ -1,0 +1,57 @@
+.hero{
+    margin: 100px 0;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+
+    &__card{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border: 3px solid black;
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0 0 10px 0 rgba(0, 128, 0, 0.508);
+        img {
+            max-width: 500px;
+            width: 100%;
+            object-fit: contain;
+            display: block;
+            height: auto;
+            aspect-ratio: 1;
+        }
+
+        p {
+            // max-height: 4em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            // line-height: 1.2
+        }
+        h2 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+    }
+
+    .load {
+        text-align: center;
+        padding: 200px;
+    }
+    &__card-rating {
+        display: flex;
+        justify-content: space-between;
+        background: #000;
+        color: #fff;
+        padding: 5px;
+        border-radius: 8px;
+    }
+}
